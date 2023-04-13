@@ -1,0 +1,35 @@
+{
+    "filetype": "query",
+    "cfgdir": "/etc/taos",
+    "host": "127.0.0.1",
+    "port": 6030,
+    "user": "root",
+    "password": "taosdata",
+    "confirm_parameter_prompt": "no",
+    "databases": "test0",
+    "query_times": 500,
+    "query_mode": "taosc",
+    "result_file": "./result_query.txt",
+    "specified_table_query": {
+        "query_interval": 100000,
+        "concurrent": 1,
+        "sqls": [
+            {
+                "sql": "select * from xxxx",
+                "rand_ts_range": 1,
+                "ts_start_ns": 1601510400000000000,
+                "ts_end_ns": 1601610399990000000,
+                "ts_intv_ns": 500000000000,
+                "result": "",
+                "ts_precision": "ms"
+            }
+        ]
+    },
+    "super_table_query": {
+        "stblname": "meters",
+        "query_interval": 1,
+        "threads": 3,
+        "sqls": [
+        ]
+    }
+}
